@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 
+        浏览器自上而下解析，正常步骤
+                    1.asynctwo
+                    2.asyncone
+                    3.asyncthree
+        在script上加上async后则表示这两个外部链接立即下载,但不能阻止其他页面动作,但是加上的async会依次进行
+                    1.asyncthree
+                    2.asynctwo
+                    3.asyncowe
+
+        async(异步的)---可选---只对外部脚本文件有效:
+            表示应该立即开始下载脚本，但不能阻止其他页面动作，比如下载资源或等待其他脚本加载
+    -->
+    <script async src="./js/asynctwo.js"></script>
+    <script async src="./js/asyncone.js"></script>
+    <script>
+        var asyncthree = 'asyncthree'
+        console.log(asyncthree);
+    </script>
+</body>
+</html>

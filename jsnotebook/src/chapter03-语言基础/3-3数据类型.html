@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-3数据类型</title>
+</head>
+<body>
+
+</body>
+<script>
+    /* 
+        0.0 typeof 
+            是操作符不是函数,它没有参数,但是它可以使用参数
+            一次typeof的基本类型都是基本类型,复杂类型都是object,函数除外,二次typeof都是字符串
+    */
+
+
+    /* 
+        1. 简单数据类型(7种): 也称为原始类型 
+            String Number Boolean Undefined Null Symbol Bigint
+    */
+    // 1.1 String类型
+
+    // 1.2 Number类型
+        /*
+            浮点值与整数值: 会靠近于整数值如1.0则自动转换为1,10.0自动转换为10,如果.0的都会自动转换为整数
+            值的范围: 当数值过大的时候可能不能在用于计算,可以用方法isFinite()判断是否可以继续用于计算 Number.MAX_VALUE ~ Number.MIN_VALUE
+            NaN: (not a Number) 分子是0,分母是0相除则是NaN;分子是0,分母不是0则是Infinity或-Infinity
+        */
+
+    // 1.3 Boolean类型:有true和false两种,可以用Boolean()将其它类型转换为布尔类型,无论一个什么值想要得到对应的boolean类型,则!!(双叹号)
+    /* 
+        流控制语句会自动转换控制:
+            数据类型                        转换为true的值                          转换为false的值
+            Boolean                           true                                  false
+            String                          非空字符串                               ''空字符串
+            Number                      非零数值(包括无穷值)                            0,NaN
+            Object                           任意对象                                  null
+            Undefined                       N/A(不存在)                             undefined
+    */
+
+    // 1.4 Undefined类型:声明了一个变量要给它赋值来确定这个变量的类型,如果赋值了则该变量就是赋的值,如果没有赋值则就把undefined这个类型本身赋值给这个变量
+    let _demoUndefined
+    console.log(_demoUndefined, '_demoUndefined1.4');
+    if(_demoUndefined) {
+        alert('???')
+    }
+
+    // 1.5 Null类型:表示一个空对象指针,建议在将来要保存对象值的变量定义为null,方便判定,字面上null == undefined
+    let _demoNull = null
+    console.log(_demoNull, '_demoNull1.3');
+    if(_demoNull) {
+        alert('null..')
+    }
+    if(_demoNull != null) {
+        alert('!null')
+    }
+    console.log(_demoNull == undefined)
+
+    // 1.6 Symbol类型
+
+    // 1.7 Bigint类型
+
+
+    /* 
+        2. 复杂数据类型(1种+5种=6种): 只用Object类型,函数是特殊的所以给特殊一下但是本身不是一种类型
+            Function    Array   Math   Date    RegRex
+    */
+
+    // 2.1 Object类型
+
+    // 2.2 Function类型
+
+    // 2.3 Array类型
+
+    // 2.4 Math类型
+
+    // 2.5 Date类型
+
+    // 2.6 RegRex类型
+</script>
+</html>
